@@ -1,5 +1,13 @@
-btn = document.querySelector('.container')
-function BenYu(textbook) {
-    console.log('JuSt ReAd ThE tExTbOoK!')
+//part one
+const selectOriginal = document.querySelectorAll('.original-container div')
+
+function copyOriginalsSection(cloneDiv) {
+    const copyContainer = document.querySelector('.copy-container')
+    copyContainer.insertAdjacentHTML('afterbegin', cloneDiv.currentTarget.outerHTML)
 }
-btn.addEventListener('click', BenYu)
+
+selectOriginal.forEach(element => element.addEventListener('click', copyOriginalsSection))
+
+
+
+
